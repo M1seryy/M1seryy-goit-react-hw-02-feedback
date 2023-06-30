@@ -4,16 +4,11 @@ import Stack from '@mui/material/Stack';
 
 class Feedback extends Component {
   state = {
-    good: 3,
-    neutral: 10,
-    bad: 5,
-  };
-  countPositiveFeedbackPercentage = () => {
-    let total = this.state.good + this.state.neutral + this.state.bad;
-    let result = (100 * this.state.good) / total;
-    return Math.round(result);
+    res: 0,
   };
   render() {
+    let result = (100 * this.props.good) / this.props.total;
+    this.setState({ res: Math.round(result) });
     return (
       <div>
         <Stack direction="row" spacing={2}>
@@ -22,11 +17,11 @@ class Feedback extends Component {
           <Button variant="contained">Bad</Button>
         </Stack>
         <h1>Statistic</h1>
-        <p>Good:{this.state.good}</p>
-        <p>Neutral:{this.state.neutral}</p>
-        <p>Bad:{this.state.bad}</p>
-        <p>Total:{this.state.good + this.state.neutral + this.state.bad}</p>
-        <p>Posotive feedback:{this.countPositiveFeedbackPercentage()}%</p>
+        <p>Good:{this.props.good}</p>
+        <p>Neutral:{this.props.neutral}</p>
+        <p>Bad:{this.props.bad}</p>
+        <p>Total:{this.props.total}</p>
+        <p>Posotive feedback:{this.state.res}%</p>
       </div>
     );
   }
