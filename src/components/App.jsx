@@ -33,6 +33,7 @@ class App extends Component {
           color: '#010101',
         }}
       >
+        <Section title="Statisctic"/>
         <Section>
           <FeedbackOptions
             options={options}

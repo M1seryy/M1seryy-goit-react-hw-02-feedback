@@ -6,7 +6,6 @@ class Statistic extends Component {
     let result = (100 * this.props.good) / this.props.total;
     return (
       <div>
-        <Section title="Statistic"/>
         <p>Good:{this.props.good}</p>
         <p>Neutral:{this.props.neutral}</p>
         <p>Bad:{this.props.bad}</p>

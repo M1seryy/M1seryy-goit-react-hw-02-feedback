@@ -6,7 +6,7 @@ export default class Section extends Component {
     const children = this.props.children;
     return (
       <>
-        <h1>{title}</h1>
+        {title ? <h1>{title}</h1> : null}
         <div>{children}</div>
       </>
     );
