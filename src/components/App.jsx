@@ -38,7 +38,7 @@ class App extends Component {
             options={options}
             onLeaveFeedback={this.onLeaveFeedback}
           />
-          {this.state.good + this.state.neutral + this.state.bad != 0 ? (
+          {this.state.good + this.state.neutral + this.state.bad !== 0 ? (
             <Statistic
               good={this.state.good}
               neutral={this.state.neutral}
