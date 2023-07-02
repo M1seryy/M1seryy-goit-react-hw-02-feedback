@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Section from './Section';
 
 class Statistic extends Component {
   render() {
