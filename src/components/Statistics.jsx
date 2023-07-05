@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Statistic extends Component {
   render() {
@@ -14,5 +15,13 @@ class Statistic extends Component {
     );
   }
 }
+
+  Statistic.propTypes = {
+    good: PropTypes.number,
+    bad: PropTypes.number,
+    neutral: PropTypes.number,
+    total: PropTypes.number,
+  }
+
 
 export default Statistic;
